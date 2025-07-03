@@ -22,6 +22,6 @@ class TaskUpdate(BaseTaskClass):
 class TaskInDB(BaseTaskClass):
     id: int
     created_at: datetime
-
-    class config:
-        orm_more = True
+    
+    class Config:
+        orm_mode = True
