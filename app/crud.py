@@ -28,11 +28,13 @@ def update_task(db: Session, task_id: int, task_data: schemas.TaskUpdate):
         task = db.query(models.Task).filter(models.Task.id == task_id).first()
         if task is None:
             return None
+        
         for k,v in task_data.model_dump(exclude_unset=True).items():
             setattr(task, k, v)
-            db.commit()
-            db.refresh(task)
-            return task
+        
+        db.commit()
+        db.refresh(task)
+        return task
     except SQLAlchemyError as e:
         db.rollback()
         raise e

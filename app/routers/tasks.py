@@ -36,6 +36,7 @@ def update_task(task_id: int, task_data: schemas.TaskUpdate, db: Session = Depen
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Task Not Found!")
     return updated
 
+
 @router.delete("/{task_id}", response_model=schemas.TaskInDB, status_code=status.HTTP_200_OK)
 def delete_task(task_id: int, db: Session = Depends(get_db)):
     deleted = crud.delete_task(db, task_id)
