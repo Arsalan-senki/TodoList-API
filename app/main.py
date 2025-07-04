@@ -6,7 +6,7 @@ from starlette.status import HTTP_500_INTERNAL_SERVER_ERROR
 from app import models
 from app.database import engine
 from app.routers import tasks
-from app.logger import logger  # ✅ Import the logger
+from app.logger import logger
 
 # Create tables
 models.Base.metadata.create_all(bind=engine)
