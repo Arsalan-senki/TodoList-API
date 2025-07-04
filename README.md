@@ -23,11 +23,11 @@ cd TodoList
 ```
 
 ### 2. Create a .env file
-DB_USER=user
-DB_PASSWORD=pass
-DB_NAME=todo_db
-DB_HOST=db
-DB_PORT=5432
+- DB_USER=user
+- DB_PASSWORD=pass
+- DB_NAME=todo_db
+- DB_HOST=db
+- DB_PORT=5432
 
 ---
 
