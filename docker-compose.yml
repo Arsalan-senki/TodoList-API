@@ -14,7 +14,7 @@ services:
       - testapp
 
   db:
-    image: postgres:16
+    image: docker.arvancloud.ir/postgres:16
     container_name: postgres16
     restart: always
     environment:
